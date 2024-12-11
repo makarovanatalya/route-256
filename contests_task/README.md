@@ -1,2 +1,1 @@
-# route-256
-Задачи с отборочного тура route256.ozon.ru
+Tasks from the qualifying round route256.ozon.ru

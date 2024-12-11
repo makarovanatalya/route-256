@@ -1,19 +1,17 @@
-###Условия
+##Conditions
 
-Вам дано целое число x.
-Можете ли вы получить x, просуммировав некоторое количество 11, 111, 1111, 11111, …? (Вы можете использовать любое число среди них любое количество раз).
-Например,
+You are given an integer x.
+Can you get x by summing some number of 11, 111, 1111, 11111, …? (You can use any number among them any number of times).
+For example,
 33=11+11+11
 144=111+11+11+11
 
+###Input format
 
-###Формат входных данных
+The first line of input contains one integer t — the number of input data sets.
+The first and only line of each input data set contains one integer x — the number you should get.
 
-Первая строка ввода содержит одно целое число t — количество наборов входных данных.
-Первая и единственная строка каждого набора входных данных содержит одно целое число x — число, которое вы должны получить.
+###Output format
 
-
-###Формат выходных данных
-
-Для каждого набора входных данных вы должны вывести одну строку. Если вы можете получить x, выведите «YES» (без кавычек). В противном случае выведите «NO».
-Вы можете вывести каждую букву из «YES» и «NO» в любом регистре (верхнем или нижнем).
+For each input data set, you should print one line. If you can get x, print "YES" (without quotes). Otherwise, print "NO".
+You can print each letter of "YES" and "NO" in any case (upper or lower).

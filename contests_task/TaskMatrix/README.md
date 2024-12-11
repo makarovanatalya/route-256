@@ -1,15 +1,14 @@
-###Условия
+###Conditions
 
-Напишите функцию, которая "поворачивает" матрицу N*N, где 0 <= N < 6.
+Write a function that "rotates" an N*N matrix, where 0 <= N < 6.
 
-Пример:
+Example:
 rotate_matrix([[1, 2], [3, 4]])
 
-Ответ:
+Answer:
 [[3, 1], [4, 2]]
 
-
-Для чтения и записи входных и выходных данных воспользуйтесь следующим шаблоном кода:
+Use the following code template to read and write input and output data:
 
 ```
 

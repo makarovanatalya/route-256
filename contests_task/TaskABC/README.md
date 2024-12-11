@@ -1,13 +1,13 @@
-###Условия
+###Conditions
 
-Задача для Python-разработчиков. Напишите функцию, которая переведет число в формат представления, использующийся в Excel.
-Примеры:
+A task for Python developers. Write a function that will convert a number to the format used in Excel.
+Examples:
 `1 -> A`, `2 -> B`, `26 -> Z`, `27 -> AA`, `28 -> AB`
 
-Граница входных данных:
-от 1 до 255 включительно
+Input data boundary:
+from 1 to 255 inclusive
 
-Для чтения и записи входных и выходных данных воспользуйтесь следующим шаблоном кода:
+To read and write input and output data, use the following code template:
 
 ```
 
@@ -28,14 +28,10 @@ if __name__ == "__main__":
     print(json.dumps(answer))
 
 ```
+###Input data format
 
+The function input is an integer number in the range from 1 to 255 inclusive.
 
-###Формат входных данных
+###Output data format
 
-На вход функции подается целое число, входящее в диапазон от 1 до 255 включительно.
-
-
-###Формат выходных данных
-
-На выходе должна быть последовательность символов.
-
+The output must be a sequence of characters.

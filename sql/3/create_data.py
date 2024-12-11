@@ -62,6 +62,7 @@ def create_data():
     s = select(animals.c).select_from(animals).where(animals.c.id == random_animal_id)
     conn = engine.connect()
     rows = conn.execute(s)
+    conn.close()
 
     for row in rows:
         data_for_test = {

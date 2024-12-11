@@ -1,1 +1,1 @@
-Часть задач и решений с курса route256.ozon.ru.
+Some test tasks from the course route256.ozon.ru.

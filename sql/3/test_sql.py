@@ -8,7 +8,7 @@ from hamcrest import (assert_that, greater_than_or_equal_to, has_key,
 def test_create_data():
     test_data = create_data()
 
-    # chek structure
+    # check structure
 
     assert_that(test_data, has_key('id'))
     assert_that(test_data, has_key('type'))
@@ -17,7 +17,7 @@ def test_create_data():
     assert_that(test_data, has_key('sex'))
     assert_that(test_data, has_key('owner_id'))
 
-    # chek types
+    # check types
 
     assert_that(test_data['id'], instance_of(int), reason='Animal ID is not int')
     assert_that(test_data['owner_id'], instance_of(int), reason='Owner ID is not int')

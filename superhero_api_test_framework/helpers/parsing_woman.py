@@ -12,7 +12,7 @@ def parse_women():
     for i in range(0, len(td_table) - 1, 2):
         if re.match('.*woman.*', td_table[i + 1].lower()):
             id = td_table[i].replace('<td>', '').replace('</td>', '')
-            name = td_table[i + 1].replace('<td>', '').replace('</td>','')
+            name = td_table[i + 1].replace('<td>', '').replace('</td>', '')
             parse_woman[id] = name
 
     return parse_woman

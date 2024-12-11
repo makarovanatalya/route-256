@@ -1,26 +1,25 @@
-###Условия
+###Conditions
 
-Напишите функцию, которая по строковому пути получает вложенный объект в словаре или списке.
+Write a function that gets a nested object in a dictionary or list by a string path.
 
-Например: 
+For example:
+
 get_by_dotted_path({'a': {'b': [1, 2]}}, 'a.b.1')
 
-Ответ:
+Answer:
 2
 
-При попытке некорректного обращения, например
+If you try to access it incorrectly, for example
 get_by_dotted_path({'a': {'b': []}}, 'a.c')
-нужно выбрасывать `LookupError`.
-При пустой строке — возвращать `None`.
+you should throw `LookupError`.
+If the string is empty, return `None`.
 
+###Limitations:
+Only dictionaries and lists / their combinations are accepted as input.
+All dictionary keys are always strings, keys should not contain '.'
+The solution should not have more than three levels of nesting.
 
-####Ограничения:
-На вход подаются только словари и списки / их комбинации.
-Все ключи словарей — всегда строки, ключи не должны содержать '.'
-Решение не должно иметь больше трех уровней вложенности.
-
-Для чтения и записи входных и выходных данных воспользуйтесь следующим шаблоном кода:
-
+Use the following code template to read and write input and output data:
 ```
 
 import json

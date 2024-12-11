@@ -1,25 +1,25 @@
-###1. Написать тест.
+###1. Develop a test.
 
-Написать параметризованный тест, который будет выполнять запрос сюда:
+Develop a parameterized test sends a request to:
 
 ```https://superheroapi.com/api/<access-token>/id```
 
 
-Ограничения:
-* Для **superheroapi.com** должен быть реализован отдельный http-client.
-* В качестве параметра - предполагается массив из пяти случайных чисел в диапазоне [1-700].
+Requirements:
+* Implement a http-client for **superheroapi.com**.
+* Use a list of 5 random numbers in the range [1-700] for parametrizing.
 
 
-###2. Реализовать декоратор быстрой проверки.
+###2. Implement a quick check decorator.
 
-Реализовать декоратор **@smoke_check**, который будет вызываться перед разработанным тестом.
+Implement a **@smoke_check** decorator to be called before a test.
 
-Функционал декоратора - проверить, что:
-* код ответа успешен.
-* в поле **response** указан статус **success**.
-* декоратор должен быть размещен в директории **checkers**.
+It should check that:
+* the response code is okay;
+* the **response** field contains the **success** status;
+* the decorator should be placed in the **checkers** directory.
 
-Пример предполагаемого решения:
+The example:
 
 ```
 import pytest
@@ -31,54 +31,53 @@ def test_superhero_example(*args):
     return response
 ```
 
-###3. Написать тест (woman is woman?).
+###3. Develop a test "woman is woman?".
 
-Написать функцию, которая получает данные со страницы:
+Implement a function that gets the data from:
 
 **https://www.superheroapi.com/ids.html**
 
-и вытаскивает оттуда имена всех персонажей, у которых в имени указано **Woman** (non-case-sensitive поиск)
+and gets from here names that contain "**Woman**" (non-case-sensitive search)
 
-Примеры:
+For example:
 ```json
 Bionic Woman
 Hawkwoman
 Batwoman V
 ```
 
-Полученные данные должны быть использованы для параметризации теста.
+This data should be used for parametrizing the test.
 
-Сам тест должен:
-1. Получить информацию о персонаже: ```https://superheroapi.com/api/<access-token>/id```
+The test should:
+1. Get info about a superhero: ```https://superheroapi.com/api/<access-token>/id```
 
-2. Проверить, что у всех полученных записей в поле **appearance/gender** - действительно указано **Female**.
+2. Check that their gender (**appearance/gender**) is **Female**.
 
-Ограничения:
-* Для ассертов нужно использовать библиотеку **pyHamcrest**.
-* Для **superheroapi.com** должен быть реализован отдельный http-client.
-* Для парсинга страницы со всеми персонажами рекомендуется использовать стандартную библиотеку **re**.
+Requirements:
+* Use the **pyHamcrest** library for assertions.
+* Use a http-client for **superheroapi.com**.
+* Use the **re** library for parsing superheroes page.
 
-###4. Написать тест (Batman vs Superman) с фикстурой.
+###4. Develop a test "Batman vs Superman" with a fixture.
 
-Реализовать тест, который сравнивает силу персонажей.
+Develop a test that compares power of superheroes.
 
-Так как не для всех персонажей указаны характеристики (у многих **null**), требуется реализовать фикстуру для подготовки данных.
-
-Фикстура должна:
-* сформировать случайное число в диапазоне [1-700]
-* проверить, что для данного персонажа указана характеристика **power**:
+Not all superheroes have all characteristics, needs to develop a fixture to prepare the data.
+The fixture should:
+* get a random number in the range [1-700]
+* check that this superhero has not null **power**:
 
 ```https://www.superheroapi.com/api.php/<access-token>/id/powerstats```
 
-* в случае успеха число должно быть сохранено, и процедуру следует повторить для второго параметра.
+* in case of success, repeat the same for the second superhero.
 
-Далее из фикстуры нужно вызвать функцию **who_stronged**, которая должна:
-1. Cравнить двух персонажей по параметру ```power```.
-2. И вернуть имя (```name```) персонажа, который оказался сильнее.
+Then the **who_stronged** function should be called (form the fixture) which should
+1. Compare superheroes by the ```power``` parameter.
+2. Return (```name```) of the strongest superhero.
 
-В результате фикстура должна вернуть в тест пару ID, проверка по которым прошла успешно, и имя победителя.
+The fixture should return: 2 ids, and the name of the winner.
 
-Пример данных, где все хорошо:
+The example of the data from API:
 
 ```json
 {
@@ -94,9 +93,9 @@ Batwoman V
 }
 ```
 
-Задача теста:
+The test should:
 
-1. Выполнить по каждому ID запрос: ```https://www.superheroapi.com/api.php/<access-token>/id```
-2. Сравнить результаты двух запросов по параметру ```powerstats/power```.
-3. Получить имя победителя.
-4. И сравнить с тем, что было передано в тест из фикстуры - все должно совпасть.
+1. Send a request for each ID: ```https://www.superheroapi.com/api.php/<access-token>/id```
+2. Compare ```powerstats/power``` for them.
+3. Get the winner's name.
+4. Compare the result with the result for the fixture (it should be equal).

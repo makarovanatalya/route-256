@@ -1,7 +1,7 @@
-## Задание по SQL
+## SQL assignment
 
-### 1. Самый взрослый пользователь.
-Дана таблица:
+### 1. The oldest user.
+In the table:
 ```sql
 CREATE TABLE users
 (
@@ -10,10 +10,10 @@ CREATE TABLE users
     age  integer
 );
 ```
-Напишите запрос, который покажет имя самого взрослого пользователя в таблице
+Find the name of the oldest user.
 
-### 2. Где пользователи?
-Даны связанные таблицы таблицы:
+### 2. Where are users?
+In 2 related tables:
 ```sql
 CREATE TABLE users
 (
@@ -27,9 +27,9 @@ CREATE TABLE location
     name        varchar(40)
 );
 ```
-Напишите запрос, который покажет 10 имен пользователей, которые живут в Москве
+Find 10 names of the users that live in Moscow.
 
-### 3. Подготовка данных.
-Нужно написать тест на Python, который подключается к локальной базе данных, создает таблицу animals (Добавьте минимум 5 полей разного типа. Поля и типы придумайте на свое усмотрение).
-После этого заполните таблицу 5 разными животными.
-После получите из таблицы одну из записей. И проверьте в тесте, что полученные поля корректны с помощью использования assert. Тест должен проходить. Чем разнообразнее проверки будут - тем лучше.
+### 3. Data preparation.
+Develop a test that connects to a local DB, creates the animals table (the table should have at least 5 columns of different types).
+Fill the table with 5 different animals.
+Get one of the rows (in the test) and check that they are correct.

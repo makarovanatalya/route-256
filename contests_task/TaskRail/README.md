@@ -1,14 +1,12 @@
-###Условия
+##Conditions
 
-В магазине продается неограниченное количество плинтусных реек с длинами 1,2,…,n. Вы хотите купить некоторый набор реек, чтобы получить суммарную длину L.
-Разрешается чтобы в вашем наборе были рейки имеющие одну и ту же длину. Какое минимальное количество реек нужно, чтобы получить длину L?
+The store sells an unlimited number of skirting boards with lengths 1,2,…,n. You want to buy a certain set of boards to get the total length L.
+Your set is allowed to have boards of the same length. What is the minimum number of boards needed to get the length L?
 
+###Input data format
 
-###Формат входных данных
+The only line of input data contains two integers n and L.
 
-Единственная строка входных данных содержит два целых числа n и L.
+###Output data format
 
-
-###Формат выходных данных
-
-Выведите ровно одно целое число — минимальное количество реек, которое нужно чтобы получить длину L.
+Print exactly one integer — the minimum number of boards needed to get the length L.
